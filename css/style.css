@@ -90,6 +90,7 @@ main {
   font-family: 'Playfair Display', serif;
   color: #626262;
   margin-bottom: 40px;
+  font-weight: normal;
 }
 
 .bottom_link {
