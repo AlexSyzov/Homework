@@ -3,86 +3,114 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
   <link rel="stylesheet" href="./css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
-  <title>Homework 2</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <main>
-    <header>
+  <main class="wrapper">
+    <header class="clearfix">
+      <p class="header_logo">mart</p>
       <nav class="header_nav">
-        <ul class="navigation_list">
-          <li class="navigation_list_item nav_item_1"><a href="#">Lifestyle</a></li>
-          <li class="navigation_list_item nav_item_2"><a href="#">Photodiary</a></li>
-          <li class="navigation_list_item nav_item_3"><a href="#">Music</a></li>
-          <li class="navigation_list_item nav_item_4"><a href="#">Travel</a></li>
+        <ul class="header_list">
+          <li class="header_list_item"><a href="#">home</a></li>
+          <li class="header_list_item"><a href="#">about us</a></li>
+          <li class="header_list_item"><a href="#">page</a></li>
+          <li class="header_list_item"><a href="#">shop</a></li>
+          <li class="header_list_item"><a href="#">blog</a></li>
+          <li class="header_list_item"><a href="#">contact us</a></li>
         </ul>
       </nav>
     </header>
-    <section>
-      <article class="lifestyle article_1">
-        <ul class="article_list">
-          <li class="article_list_item article_item_1">
-            <img src="./img/image1.png" alt="A woman in a crowd">
-            <p class="article_top_p">Lifestyle</p>
-            <h2>More than just a music festival</h2>
-            <p class="article_bottom_p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris</p>
-          </li>
-          <li class="article_list_item article_item_2">
-            <img src="./img/image2.png" alt="A cup of coffee">
-            <p class="article_top_p">Lifestyle</p>
-            <h2>Life tastes better with coffee</h2>
-            <p class="article_bottom_p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris</p>
-          </li>
-        </ul>
-      </article>
-      <article class="photodiary article_2">
-        <ul class="article_list">
-          <li class="article_list_item article_item_1">
-            <img src="./img/image3.png" alt="Two women in front of the bridge">
-            <p class="article_top_p">Photodiary</p>
-            <h2>American dream</h2>
-            <p class="article_bottom_p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris</p>
-          </li>
-          <li class="article_list_item article_item_2">
-            <img src="./img/image4.png" alt="A woman in a hat">
-            <p class="article_top_p">Photodiary</p>
-            <h2>A day exploring the Alps</h2>
-            <p class="article_bottom_p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris</p>
-          </li>
-        </ul>
-      </article>
-      <article class="lifestyle article_3">
-        <ul class="article_list">
-          <li class="article_list_item article_item_1">
-            <img src="./img/image5.png" alt="A woman in a hat">
-            <p class="article_top_p">Lifestyle</p>
-            <h2>Top 10 song for running</h2>
-            <p class="article_bottom_p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris</p>
-          </li>
-          <li class="article_list_item article_item_2">
-            <img src="./img/image6.png" alt="A road in a snow covered valley">
-            <p class="article_top_p">Lifestyle</p>
-            <h2>Cold winter days</h2>
-            <p class="article_bottom_p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris</p>
-          </li>
-        </ul>
-      </article>
-    </section>
-    <a href="#" class="bottom_link">Load more</a>
+    <article class="featured_products">
+      <h2 class="featured_products_heading">featured products</h2>
+      <ul class="featured_products_list clearfix">
+        <li class="featured_products_list_item">
+          <img src="./img/product_1.png" alt="blue T-shirt"> <!-- картинки не соответствуют подписям, в alt'е укажу то, что написано в подписях -->
+          <div class="product_info">
+            <p class="product_name under_product">blue tshirt</p>
+            <p class="product_price under_product">$26</p>
+          </div>
+        </li>
+        <li class="featured_products_list_item">
+          <img src="./img/product_2.png" alt="women's shirt">
+          <div class="product_info">
+            <p class="product_name under_product">woman shirt</p>
+            <p class="product_price under_product">$31</p>
+          </div>
+        </li>
+        <li class="featured_products_list_item">
+          <img src="./img/product_3.png" alt="yellow T-shirt">
+          <div class="product_info">
+            <p class="product_name under_product">yellow tshirt</p>
+            <p class="product_price under_product">$21</p>
+          </div>
+        </li>
+        <li class="featured_products_list_item">
+          <img src="./img/product_4.png" alt="cool lingerie">
+          <div class="product_info">
+            <p class="product_name under_product">cool lingerie</p>
+            <p class="product_price under_product">$56</p>
+          </div>
+        </li>
+        <li class="featured_products_list_item">
+          <img src="./img/product_5.png" alt="blue T-shirt">
+          <div class="product_info">
+            <p class="product_name under_product">blue tshirt</p>
+            <p class="product_price under_product">$26</p>
+          </div>
+        </li>
+        <li class="featured_products_list_item">
+          <img src="./img/product_6.png" alt="women's shirt">
+          <div class="product_info">
+            <p class="product_name under_product">woman shirt</p>
+            <p class="product_price under_product">$31</p>
+          </div>
+        </li>
+        <li class="featured_products_list_item">
+          <img src="./img/product_7.png" alt="yellow T-shirt">
+          <div class="product_info">
+            <p class="product_name under_product">yellow tshirt</p>
+            <p class="product_price under_product">$21</p>
+          </div>
+        </li>
+        <li class="featured_products_list_item">
+          <img src="./img/product_8.png" alt="cool lingerie">
+          <div class="product_info">
+            <p class="product_name under_product">cool lingerie</p>
+            <p class="product_price under_product">$56</p>
+          </div>
+        </li>
+      </ul>
+    </article>
+    <article class="latest_news">
+      <h2 class="latest_news_heading">latest news</h2>
+      <ul class="latest_news_list clearfix">
+        <li class="latest_news_list_item">
+          <img src="./img/news_1.png" alt="maps on iPad">
+          <p class="news_top_p">Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean</p>
+          <p class="news_bottom_p">Nam nec tellus a odio tincidunt auc. Duis sed odio sit amet nibh vulputate cursus 
+          a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt</p>
+          <a href="#" class="news_link">Read More</a>
+        </li>
+        <li class="latest_news_list_item">
+          <img src="./img/news_2.png" alt="two girls are writing something">
+          <p class="news_top_p">Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean</p>
+          <p class="news_bottom_p">Nam nec tellus a odio tincidunt auc. Duis sed odio sit amet nibh vulputate cursus 
+          a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt</p>
+          <a href="#" class="news_link">Read More</a>
+        </li>
+        <li class="latest_news_list_item">
+          <img src="./img/news_3.png" alt="a bus">
+          <p class="news_top_p">Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean</p>
+          <p class="news_bottom_p">Nam nec tellus a odio tincidunt auc. Duis sed odio sit amet nibh vulputate cursus 
+          a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt</p>
+          <a href="#" class="news_link">Read More</a>
+        </li>
+      </ul>
+    </article>
   </main>
 </body>
 </html>
