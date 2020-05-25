@@ -377,6 +377,10 @@
   text-decoration: none;
 }
 
+.footer_form {
+  display: flex;
+}
+
 .footer_form_item {
   width: 230px;
   height: 38px;
@@ -398,7 +402,7 @@ input::placeholder {
   height: 38px;
   background: #95e1d3;
   border: none;
-  margin-left: -4px;
+  margin-left: -5px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   text-transform: uppercase;
