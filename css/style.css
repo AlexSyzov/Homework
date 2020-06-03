@@ -200,6 +200,7 @@ textarea:required:invalid:focus {
   margin-bottom: -4px;
   border: none;
 }
+
 .contact_flex_inputs > input,
 .contact_flex_textarea > textarea {
   border: 1px solid #cccccc;
@@ -255,15 +256,6 @@ textarea:required:invalid:focus {
   src: local('Montserrat ExtraBold'), local('Montserrat-ExtraBold'),
        url('../fonts/montserrat-v14-latin-600.woff2') format('woff2'),
        url('../fonts/montserrat-v14-latin-600.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Pacifico';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Pacifico Regular'), local('Pacifico-Regular'),
-       url('../fonts/pacifico-v16-latin-regular.woff2') format('woff2'),
-       url('../fonts/pacifico-v16-latin-regular.woff') format('woff');
 }
 
 @font-face {
