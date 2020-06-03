@@ -5,408 +5,279 @@
   box-sizing: border-box;
 }
 
-.wrapper {
-  width: 1201px;
-  margin: auto;
+.short_wrapper {
+  width: 940px;
+  margin: 0 auto;
 }
 
 .site_header {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  margin-bottom: 107px;
+  margin-bottom: 124px;
 }
 
 .header_logo {
-  font-size: 30px;
-  margin-top: 27px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  color: #95e1d3;
-}
-
-.header_nav {
-  margin-top: 37px;
+  font-size: 26px;
+  font-family: 'Wisdom Script';
+  font-style: normal;
+  font-weight: 400;
+  color: #fed136;
 }
 
 .header_list_item {
   display: inline-block;
-  height: 17px;
-}
-
-.header_list_item::after {
-  content: "";
-  background-color: #f38181;
-  display: block;
-  opacity: 0;
-  width: 52px;
-  height: 3px;
-  margin: 10px auto 0 auto;
-  transition: opacity 0.2s linear;
-}
-
-.header_list_item:hover::after {
-  opacity: 1;
+  margin-top: 51px;
 }
 
 .header_list_item:not(:last-child) {
-  margin-right: 48px;
+  margin-right: 39px;
 }
 
 .header_list_item a {
   text-decoration: none;
-  text-transform: uppercase;
+  color: #000;
   font-size: 14px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
-  color: #95e1d3;
-  transition: color .2s linear;
+  text-transform: uppercase;
+  transition: color .6s;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600; /* В Photoshop'е указано, что 400, но выглядит явно на 600. Сделал по внешнему виду */
 }
 
 .header_list_item a:hover {
-  color: #f38181;
+  color: #fed136;
 }
 
-.amazing_services_heading {
-  margin-bottom: 60px;
-  font-weight: 700;
-  font-size: 30px;
-}
-
-.team_heading {
-  margin-bottom: 52px;
-}
-
-.amazing_services_holder {
-  margin-bottom: 86px;
-}
-
-.amazing_services_heading,
-.team_heading {
+.services_heading, 
+.contact_heading {
+  font-size: 40px;
   text-align: center;
-  font-size: 30px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-}
-
-.amazing_services_heading::before,
-.team_heading::before {
-  display: block;
-  margin-bottom: 17px;
-  font-family: 'Kaushan Script', cursive;
-  font-size: 24px;
-}
-
-.amazing_services_heading::before {
-  content: "We work with";
-}
-
-.amazing_services_heading::after,
-.team_heading::after {
-  content: "";
-  background-color: #f38181;
-  display: block;
-  width: 57px;
-  height: 3px;
-  margin: 38px auto 0 auto;
-}
-
-.team_heading::before {
-  content: "Who we are";
-}
-
-.amazing_services_list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  list-style: none;
-  padding: 0 16px 0 84px;
-}
-
-.amazing_services_list > li {
-  position: relative;
-  width: 301px;
-}
-
-.amazing_services_list > li::before {
-  content: "";
-  background-repeat: no-repeat;
-  width: 70px;
-  height: 38px;
-  position: absolute;
-  left: -64px;
-}
-
-.amazing_services_list_text > h3 {
   text-transform: uppercase;
-  margin-bottom: 14px;
-  font-size: 14px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 800;
 }
 
-.amazing_services_list_text > p {
-  font-size: 15px;
-  font-family: 'Roboto', sans-serif;
-  line-height: 24px;
-  color: #b3b3b3;
-}
-
-.amazing_services_list_item_1 p {
-  width: 270px;
-}
-
-.amazing_services_list_item_1::before {
-  background: url(../img/amazing_services_1.png);
-  background-position: 15px 3px;
-}
-
-.amazing_services_list_item_1 > .amazing_services_list_text {
-  margin-left: 12px;
-}
-
-.amazing_services_list_item_2 p {
-  width: 260px;
-}
-
-.amazing_services_list_item_2::before {
-  background: url(../img/amazing_services_2.png);
-  background-position: 12px 3px;
-}
-
-.amazing_services_list_item_2 > .amazing_services_list_text {
-  margin-left: 8px;
-}
-
-.amazing_services_list_item_3 p {
-  width: 279px;
-}
-
-.amazing_services_list_item_3::before {
-  background: url(../img/amazing_services_3.png);
-  background-position: 5px 3px;
-}
-
-.amazing_services_list_item_4 p {
-  width: 224px;
-}
-
-.amazing_services_list_item_4::before {
-  background: url(../img/amazing_services_4.png);
-  background-position: 15px 3px;
-}
-
-.amazing_services_list_item_4 > .amazing_services_list_text {
-  margin-left: 12px;
-}
-
-.amazing_services_list_item_5 p {
-  width: 225px;
-}
-
-.amazing_services_list_item_5 > .amazing_services_list_text {
-  margin-left: 8px;
-}
-
-.amazing_services_list_item_5::before {
-  background: url(../img/amazing_services_5.png);
-  background-position: 12px 3px;
-}
-
-.amazing_services_list_item_6 p {
-  width: 289px;
-}
-
-.amazing_services_list_item_6::before {
-  background: url(../img/amazing_services_6.png);
-  background-position: 5px 3px;
-}
-
-.amazing_services_list_item_1,
-.amazing_services_list_item_2,
-.amazing_services_list_item_3 {
-  margin-bottom: 99px;
-}
-
-.team_upper_p,
-.team_list_item > h3,
-.team_list_item > p {
-  text-align: center;
-}
-
-.team_upper_p {
-  width: 1079px;
-  margin: 0 auto 90px auto;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
-  font-size: 15px;
-  color: #b3b3b3;
-}
-
-.team_list {
-  display: flex;
-  justify-content: space-between;
-  list-style: none;
-}
-
-.team_list_item {
-  position: relative;
-}
-
-.team_list_item > h3 {
-  margin: 25px 0 12px 0;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  text-transform: uppercase;
-}
-
-.team_list_item > p {
-  font-size: 15px;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
+.services_heading::after, 
+.contact_heading::after {
+  content: "Proin iaculis purus consequat sem cure.";
+  font-size: 16px;
+  display: block;
+  text-transform: none;
+  color: #777777;
+  margin-top: 11px;
+  margin-bottom: 76px;
+  font-family: 'DroidSerif';
   font-style: italic;
-  color: #b3b3b3;
+  font-weight: 400;
 }
 
-.team_list_img_block {
-  width: 380px;
-  height: 470px;
+.services_flex {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 118px;
 }
 
-.team_list_img_block:hover .team_hover_block {
-  left: -11px;
-  top: -11px;
-  opacity: 1;
+.services_flex_item::before {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 70px;
+  border: 3px solid #fed136;
+  border-radius: 100%;
+  margin: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 24px;
 }
 
-.team_list_img_block > img {
-  position: relative;
-  opacity: 1;
-  transition: .2s linear;
-  z-index: 2;
+.services_flex_item:nth-child(1)::before {
+  background-image: url(../img/services_1.png);
 }
 
-.team_list_img_block:hover > img {
-  transform: translate(-11px, -11px);
+.services_flex_item:nth-child(2)::before {
+  background-image: url(../img/services_2.png);
 }
 
-.team_list_img_block:hover > .team_under_block {
-  opacity: 1;
+.services_flex_item:nth-child(3)::before {
+  background-image: url(../img/services_3.png);
 }
 
-.team_hover_block {
+.services_flex_item > h3 {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 14px;
+  text-transform: capitalize;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 800;
+}
+
+.services_flex_item > p {
+  text-align: center;
+  width: 286px;
+  font-size: 14px;
+  color: #777777;
+  font-family: 'RobotoSlab';
+  font-style: normal;
+  font-weight: 400;
+}
+
+.contact_wrapper {
+  background-color: #222222;
+  background-image: url(../img/contact_bg.png);
+  background-repeat: no-repeat;
+  background-position: 100% 117px;
+  padding: 107px 0 120px 0;
+}
+
+.contact_heading {
+  color: #fff;
+}
+
+.contact_flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact_flex_inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contact_flex_inputs > input,
+.contact_flex_textarea > textarea,
+.contact_form_button {
+  border-radius: 4px;
+}
+
+.contact_flex_inputs > input {
+  width: 455px;
+  padding: 16px 0 19px 20px
+}
+
+input:required:valid,
+textarea:required:valid {
+  outline: 1px solid green;
+  box-shadow: 0 0 0 3px green;
+}
+
+input:required:valid:focus,
+textarea:required:valid:focus {
+  outline: 2px solid green;
+  box-shadow: 0 0 0 3px green;
+}
+
+input:required:invalid,
+textarea:required:invalid {
+  outline: 1px solid #d63737;
+  box-shadow: 0 0 0 3px #d63737;
+}
+
+input:required:invalid:focus,
+textarea:required:invalid:focus {
+  outline: 2px solid #d63737;
+  box-shadow: 0 0 0 3px #d63737;
+}
+
+.contact_flex_inputs > input::placeholder,
+.contact_flex_textarea > textarea::placeholder {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #bbbbbb;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600; /* И снова сделал по внешнему виду. Там явно не 800 */
+}
+
+.contact_flex_textarea > textarea {
+  resize: none;
+  height: 220px;
+  width: 455px;
+  padding: 16px 0 0 20px;
+  margin-bottom: -4px;
+  border: none;
+}
+.contact_flex_inputs > input,
+.contact_flex_textarea > textarea {
+  border: 1px solid #cccccc;
+}
+
+.contact_form_button {
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 0;
-  position: absolute;
-  left: 0;
-  top: 0;
-  background: linear-gradient(0deg, rgba(240, 212, 127, 0.9) 10%, rgba(248, 137, 129, 0.9) 86%);
-  width: 380px;
-  height: 470px;
-  transition: all 0.2s linear;
-  z-index: 3;
-}
-
-.team_hover_block > a {
-  width: 53px;
-  height: 54px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: #fce38a;
-  transition: all .2s linear;
-}
-
-.team_hover_block > a:not(:last-child) {
-  border-right: 1px solid #f9bd87
-}
-
-.team_hover_block > a:hover {
-  background-color: #95e1d3;
-  border-right-color: #b9bcb3;
-}
-
-.facebook_block {
-  background-image: url(../img/facebook.png);
-}
-
-.twitter_block {
-  background-image: url(../img/twitter.png);
-}
-
-.pinterest_block {
-  background-image: url(../img/pinterest.png);
-}
-
-.instagram_block {
-  background-image: url(../img/instagram.png);
-}
-
-.team_under_block {
-  opacity: 0;
-  position: absolute;
-  left: 0;
-  top: 0;
-  background: #95e1d3;
-  width: 380px;
-  height: 470px;
-  z-index: 1;
-  transition: all .2s linear;
-}
-
-.site_footer {
-  margin-top: 80px;
-  height: 59px;
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  border-top: 1px solid #d9d9d9;
-}
-
-.footer_p {
-  margin: 24px 0 24px 0;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-}
-
-.footer_link {
-  color: #f38181;
-  text-decoration: none;
-}
-
-.footer_form {
-  display: flex;
-}
-
-.footer_form_item {
-  width: 230px;
-  height: 38px;
-  border: 1px solid #d9d9d9;
-  padding-left: 10px;
-}
-
-input::placeholder {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-  font-style: italic;
-  text-transform: capitalize;
-  font-size: 15px;
-  color: #d9d9d9;
-}
-
-.footer_form_button {
-  width: 150px;
-  height: 38px;
-  background: #95e1d3;
-  border: none;
-  margin-left: -5px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 14px;
+  background-color: #fed136;
   color: #fff;
-  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 18px;
+  border: none;
+  padding: 25px 45px;
+  margin: 34px auto 0 auto;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600; /* Тоже по внешнему виду */
 }
+
+@font-face {
+  font-family: 'RobotoSlab';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('../fonts/roboto-slab-v11-latin-regular.woff2') format('woff2'),
+       url('../fonts/roboto-slab-v11-latin-regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Montserrat Regular'), local('Montserrat-Regular'),
+       url('../fonts/montserrat-v14-latin-regular.woff2') format('woff2'),
+       url('../fonts/montserrat-v14-latin-regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 800;
+  src: local('Montserrat ExtraBold'), local('Montserrat-ExtraBold'),
+       url('../fonts/montserrat-v14-latin-800.woff2') format('woff2'),
+       url('../fonts/montserrat-v14-latin-800.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Montserrat ExtraBold'), local('Montserrat-ExtraBold'),
+       url('../fonts/montserrat-v14-latin-600.woff2') format('woff2'),
+       url('../fonts/montserrat-v14-latin-600.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Pacifico';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Pacifico Regular'), local('Pacifico-Regular'),
+       url('../fonts/pacifico-v16-latin-regular.woff2') format('woff2'),
+       url('../fonts/pacifico-v16-latin-regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Wisdom Script';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/Wisdom-Script.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'DroidSerif';
+  font-style: italic;
+  font-weight: 400;
+  src: url('../fonts/droidserifitalic.woff') format('woff'),
+       url('../fonts/droidserifitalic.woff2') format('woff2');
+}
+
