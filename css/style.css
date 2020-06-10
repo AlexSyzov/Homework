@@ -5,271 +5,436 @@
   box-sizing: border-box;
 }
 
-.short_wrapper {
-  width: 940px;
+.main_wrapper,
+.content_wrapper {
+  width: 320px;
   margin: 0 auto;
 }
 
 .site_header {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  margin-bottom: 124px;
-}
-
-.header_logo {
-  font-size: 26px;
-  font-family: 'Wisdom Script';
-  font-style: normal;
-  font-weight: 400;
-  color: #fed136;
-}
-
-.header_list_item {
-  display: inline-block;
-  margin-top: 51px;
-}
-
-.header_list_item:not(:last-child) {
-  margin-right: 39px;
-}
-
-.header_list_item a {
-  text-decoration: none;
-  color: #000;
-  font-size: 14px;
-  text-transform: uppercase;
-  transition: color .6s;
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 600; /* В Photoshop'е указано, что 400, но выглядит явно на 600. Сделал по внешнему виду */
-}
-
-.header_list_item a:hover {
-  color: #fed136;
-}
-
-.services_heading, 
-.contact_heading {
-  font-size: 40px;
-  text-align: center;
-  text-transform: uppercase;
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 800;
-}
-
-.services_heading::after, 
-.contact_heading::after {
-  content: "Proin iaculis purus consequat sem cure.";
-  font-size: 16px;
-  display: block;
-  text-transform: none;
-  color: #777777;
-  margin-top: 11px;
-  margin-bottom: 76px;
-  font-family: 'DroidSerif';
-  font-style: italic;
-  font-weight: 400;
-}
-
-.services_flex {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 118px;
-}
-
-.services_flex_item::before {
-  content: "";
-  display: block;
-  width: 70px;
-  height: 70px;
-  border: 3px solid #fed136;
-  border-radius: 100%;
-  margin: auto;
+  background-image: url(../img/header_sm_bg.png);
+  background-color: rgb(54, 53, 53);
   background-repeat: no-repeat;
-  background-position: center;
-  margin-bottom: 24px;
+  padding: 20px 0 138px 0;
 }
 
-.services_flex_item:nth-child(1)::before {
-  background-image: url(../img/services_1.png);
-}
-
-.services_flex_item:nth-child(2)::before {
-  background-image: url(../img/services_2.png);
-}
-
-.services_flex_item:nth-child(3)::before {
-  background-image: url(../img/services_3.png);
-}
-
-.services_flex_item > h3 {
-  text-align: center;
-  font-size: 18px;
-  margin-bottom: 14px;
-  text-transform: capitalize;
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 800;
-}
-
-.services_flex_item > p {
-  text-align: center;
-  width: 286px;
-  font-size: 14px;
-  color: #777777;
-  font-family: 'RobotoSlab';
-  font-style: normal;
-  font-weight: 400;
-}
-
-.contact_wrapper {
-  background-color: #222222;
-  background-image: url(../img/contact_bg.png);
-  background-repeat: no-repeat;
-  background-position: 100% 117px;
-  padding: 107px 0 120px 0;
-}
-
-.contact_heading {
+.site_header * {
   color: #fff;
 }
 
-.contact_flex {
-  display: flex;
-  justify-content: space-between;
-}
-
-.contact_flex_inputs {
+.header_top_wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto 24px auto;
 }
 
-.contact_flex_inputs > input,
-.contact_flex_textarea > textarea,
-.contact_form_button {
-  border-radius: 4px;
+.header_account_list {
+  margin: 0 auto 120px auto;
 }
 
-.contact_flex_inputs > input {
-  width: 455px;
-  padding: 16px 0 19px 20px
+.header_account_list_item {
+  display: inline-block;
+  margin-left: -28px;
 }
 
-input:required:valid,
-textarea:required:valid {
-  outline: 1px solid green;
-  box-shadow: 0 0 0 3px green;
+.header_account_list_item:not(:last-child) {
+  margin-right: 26px;
 }
 
-input:required:valid:focus,
-textarea:required:valid:focus {
-  outline: 2px solid green;
-  box-shadow: 0 0 0 3px green;
-}
-
-input:required:invalid,
-textarea:required:invalid {
-  outline: 1px solid #d63737;
-  box-shadow: 0 0 0 3px #d63737;
-}
-
-input:required:invalid:focus,
-textarea:required:invalid:focus {
-  outline: 2px solid #d63737;
-  box-shadow: 0 0 0 3px #d63737;
-}
-
-.contact_flex_inputs > input::placeholder,
-.contact_flex_textarea > textarea::placeholder {
+.header_account_list_item a {
+  text-decoration: none;
   font-size: 14px;
-  text-transform: uppercase;
-  color: #bbbbbb;
   font-family: 'Montserrat';
   font-style: normal;
-  font-weight: 600; /* И снова сделал по внешнему виду. Там явно не 800 */
+  font-weight: 700;
 }
 
-.contact_flex_textarea > textarea {
-  resize: none;
-  height: 220px;
-  width: 455px;
-  padding: 16px 0 0 20px;
-  margin-bottom: -4px;
-  border: none;
-}
-
-.contact_flex_inputs > input,
-.contact_flex_textarea > textarea {
-  border: 1px solid #cccccc;
-}
-
-.contact_form_button {
+.header_sign_up a,
+.header_log_in a {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fed136;
-  color: #fff;
+  width: 87px;
+  height: 33px;
+  border-radius: 20px;
+  border: 2px solid transparent;
+  transition: border-color .2s linear;
+}
+
+.header_sign_up a:hover,
+.header_log_in a:hover {
+  border-color: #fff;
+}
+
+.header_company_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.header_company_name,
+.header_upper_slogan {
   text-transform: uppercase;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+}
+
+.header_company_name {
+  font-size: 20px;
+}
+
+.header_upper_slogan {
+  margin-bottom: 8px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.header_lower_slogan {
+  margin-bottom: 16px;
   font-size: 18px;
-  border: none;
-  padding: 25px 45px;
-  margin: 34px auto 0 auto;
+  text-align: center;
+  width: 212.3px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 100;
+}
+
+.header_link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  font-size: 14px;
   font-family: 'Montserrat';
   font-style: normal;
-  font-weight: 600; /* Тоже по внешнему виду */
+  font-weight: 500;
+  text-decoration: none;
+  width: 279px;
+  height: 37px;
+  background-color: #ff4e50;
+  transition: all .2s linear;
+  cursor: pointer;
 }
 
-@font-face {
-  font-family: 'RobotoSlab';
+.header_link:hover {
+  background-color: #cf3e40;
+  box-shadow: rgb(238, 210, 55) 2px 2px 2px 2px;
+}
+
+.partners_section {
+  padding-top: 70px;
+  padding-bottom: 58px;
+  margin: 0 auto;
+}
+
+.partners_heading {
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.partners_heading,
+.partners_list_item h3,
+.partners_link {
+  font-family: 'Montserrat';
   font-style: normal;
-  font-weight: 400;
-  src: local(''),
-       url('../fonts/roboto-slab-v11-latin-regular.woff2') format('woff2'),
-       url('../fonts/roboto-slab-v11-latin-regular.woff') format('woff');
+  font-weight: 700;
+}
+
+.partners_list {
+  width: 214px;
+  margin: 0 auto;
+  list-style: none;
+}
+
+.partners_list_item {
+  text-align: center;
+  font-size: 14px;
+}
+
+.partners_list_item:not(:last-child) {
+  margin-bottom: 27px;
+}
+
+.partners_list_item .img_block {
+  width: 121px;
+  height: 121px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.partners_list_item:nth-child(1) .img_block {
+  background-image: url(../img/partner_1.png);
+}
+
+.partners_list_item:nth-child(2) .img_block {
+  background-image: url(../img/partner_2.png);
+}
+
+.partners_list_item:nth-child(3) .img_block {
+  background-image: url(../img/partner_3.png);
+}
+
+.partners_list_item:nth-child(4) .img_block {
+  background-image: url(../img/partner_4.png);
+}
+
+.partners_list_item .img_block::after {
+  content: "";
+  width: 31px;
+  height: 31px;
+  position: absolute;
+  top: 86px;
+  left: 71%;
+  border-radius: 100%;
+  background-repeat: no-repeat;
+  border: 4px solid #fff;
+}
+
+.partners_list_item:nth-child(1) .img_block::after {
+  background-color: #ff4e50;
+  background-image: url(../img/partner_1_icon.png);
+  background-position: 49% 45%;
+}
+
+.partners_list_item:nth-child(2) .img_block::after {
+  background-color: #ffa507;
+  background-image: url(../img/partner_2_icon.png);
+  background-position: 50% 45%;
+}
+
+.partners_list_item:nth-child(3) .img_block::after {
+  background-color: #1cd7ad;
+  background-image: url(../img/partner_3_icon.png);
+  background-position: 46.5% 45%;
+}
+
+.partners_list_item:nth-child(4) .img_block::after {
+  background-color: #4e73db;
+  background-image: url(../img/partner_4_icon.png);
+  background-position: 39.286% 50.5%;
+}
+
+.partners_list_item h3 {
+  margin: 20px 0 16px 0;
+}
+
+.partners_list_item p {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+}
+
+.partners_link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 276px;
+  height: 38px;
+  margin: 26px auto 0 auto;
+  border: 2px solid #ff4e50;
+  color: #ff4e50;
+  text-decoration: none;
+  font-size: 14px;
+  border-radius: 26px;
+  transition: all .2s linear;
+  cursor: pointer;
+}
+
+.partners_link:hover {
+  background-color: #ff4e50;
+  color: #fff;
+  box-shadow: rgb(238, 210, 55) 2px 2px 2px 2px;
+}
+
+@media (min-width: 768px) {
+
+  .main_wrapper {
+     width: 768px;
+   }
+
+  .content_wrapper {
+    width: 492px;
+  }
+
+  .site_header {
+    background-image: url(../img/header_md_bg.png);
+    padding-top: 35px;
+  }
+
+  .header_top_wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 87%;
+    margin-bottom: 140px;
+    line-height: 1.9;
+  }
+
+  .header_upper_slogan {
+    font-size: 52px;
+    margin-bottom: 25px;
+  }
+
+  .header_company_wrapper {
+    width: 66%;
+  }
+
+  .header_account_list {
+    margin: 0;
+  }
+
+  .header_lower_slogan {
+    font-size: 24px;
+    width: 387px;
+    margin-bottom: 35px;
+  }
+
+  .header_link {
+    width: 227px;
+    height: 39px;
+  }
+
+  .partners_section {
+    width: 492px;
+    padding-bottom: 39px;
+  }
+
+  .partners_heading {
+    margin-bottom: 33px;
+  }
+
+  .partners_list {
+    display: flex;
+    flex-flow: column wrap;
+    width: 490px;
+    height: 507px;
+  }
+
+  .partners_list_item {
+    width: 214px;
+  }
+
+  .partners_list_item:not(:nth-child(2n)) {
+    margin-bottom: 55px;
+  }
+
+  .partners_list_item:nth-child(2n) {
+    margin-bottom: 0;
+  }
+
+  .partners_link {
+    margin-top: 37px;
+    width: 190px;
+  }
+
+}
+
+@media (min-width: 1440px) {
+  
+  .main_wrapper {
+    width: 1440px;
+  }
+
+  .content_wrapper {
+    width: 940px;
+  }
+
+  .site_header {
+    background-image: url(../img/header_lg_bg.png);
+    padding-top: 43px;
+  }
+
+  .header_top_wrapper {
+    width: 940px;
+    margin-bottom: 137px;
+  }
+
+  .header_company_wrapper {
+    width: 503px;
+  }
+
+  .header_upper_slogan {
+    margin-bottom: 20px;
+  }
+
+  .header_lower_slogan {
+    margin-left: -6px;
+    margin-bottom: 32px;
+  }
+
+  .header_link {
+    width: 223px;
+    margin-right: -1px;
+  }
+
+  .partners_section {
+    width: 940px;
+    padding-bottom: 71px;
+  }
+
+  .partners_list {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 940px;
+    height: 250px;
+  }
+
+  .partners_list_item:nth-child(-n + 4) {
+    margin-bottom: 0;
+  }
+
+  .partners_list_item:nth-child(2) {
+    order: 3;
+  }
+
+  .partners_list_item:nth-child(3) {
+    order: 2;
+  }
+
+  .partners_list_item:nth-child(4) {
+    order: 4;
+  }
+
 }
 
 @font-face {
   font-family: 'Montserrat';
   font-style: normal;
-  font-weight: 400;
-  src: local('Montserrat Regular'), local('Montserrat-Regular'),
-       url('../fonts/montserrat-v14-latin-regular.woff2') format('woff2'),
-       url('../fonts/montserrat-v14-latin-regular.woff') format('woff');
+  font-weight: 500;
+  src: local('Montserrat Medium'), local('Montserrat-Medium'),
+       url('../fonts/montserrat-v14-latin-500.woff2') format('woff2'),
+       url('../fonts/montserrat-v14-latin-500.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Montserrat';
   font-style: normal;
-  font-weight: 800;
-  src: local('Montserrat ExtraBold'), local('Montserrat-ExtraBold'),
-       url('../fonts/montserrat-v14-latin-800.woff2') format('woff2'),
-       url('../fonts/montserrat-v14-latin-800.woff') format('woff');
+  font-weight: 700;
+  src: local('Montserrat Bold'), local('Montserrat-Bold'),
+       url('../fonts/montserrat-v14-latin-700.woff2') format('woff2'),
+       url('../fonts/montserrat-v14-latin-700.woff') format('woff');
 }
 
 @font-face {
-  font-family: 'Montserrat';
+  font-family: 'Roboto';
   font-style: normal;
-  font-weight: 600;
-  src: local('Montserrat ExtraBold'), local('Montserrat-ExtraBold'),
-       url('../fonts/montserrat-v14-latin-600.woff2') format('woff2'),
-       url('../fonts/montserrat-v14-latin-600.woff') format('woff');
+  font-weight: 100;
+  src: local('Roboto Thin'), local('Roboto-Thin'),
+       url('../fonts/roboto-v20-latin-100.woff2') format('woff2'),
+       url('../fonts/roboto-v20-latin-100.woff') format('woff');
 }
 
 @font-face {
-  font-family: 'Wisdom Script';
+  font-family: 'Roboto';
   font-style: normal;
-  font-weight: 400;
-  src: url('../fonts/Wisdom-Script.woff') format('woff');
+  font-weight: 300;
+  src: local('Roboto Light'), local('Roboto-Light'),
+       url('../fonts/roboto-v20-latin-300.woff2') format('woff2'),
+       url('../fonts/roboto-v20-latin-300.woff') format('woff');
 }
-
-@font-face {
-  font-family: 'DroidSerif';
-  font-style: italic;
-  font-weight: 400;
-  src: url('../fonts/droidserifitalic.woff') format('woff'),
-       url('../fonts/droidserifitalic.woff2') format('woff2');
-}
-
