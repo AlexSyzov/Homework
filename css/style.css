@@ -6,12 +6,13 @@
 }
 
 .site_header {
-  background-image: url(../img/header_lg_bg.png);
+  background-image: url(../img/header_bg.png);
   background-position: center;
   background-color: rgb(54, 53, 53);
   background-repeat: no-repeat;
   background-size: cover;
   padding: 30px 0 138px 0;
+  height: 540px;
 }
 
 .site_header * {
@@ -19,41 +20,33 @@
 }
 
 .header_top_wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-left: 19px;
-  margin: 0 auto 28px auto;
+ margin-bottom: 27px; 
 }
 
 .header_account_list {
-  margin: 0 auto 112px auto;
+  list-style: none;
+  display: flex;
+  margin-bottom: 128px;
 }
 
-.header_account_list_item {
-  display: inline-block;
-  margin-left: -20px;
-}
-
-.header_account_list_item:not(:last-child) {
-  margin-right: 12px;
+.header_account_list_item:nth-child(1) {
+  text-align: right;
+  padding-right: 10px;
 }
 
 .header_account_list_item a {
+  padding: 9px 16px;
   text-decoration: none;
   font-size: 14px;
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 500;
+  width: 86px;
+  height: 32px;
 }
 
 .header_sign_up a,
 .header_log_in a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 87px;
-  height: 33px;
   border-radius: 20px;
   border: 2px solid transparent;
   transition: border-color .2s linear;
@@ -64,19 +57,13 @@
   border-color: #fff;
 }
 
-.header_company_wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0 auto;
-}
-
 .header_company_name,
 .header_upper_slogan {
   text-transform: uppercase;
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 700;
+  text-align: center;
 }
 
 .header_company_name {
@@ -84,17 +71,16 @@
 }
 
 .header_upper_slogan {
-  margin-bottom: 8px;
   font-size: 30px;
+  margin: 0 auto 6px auto;
+  width: 300px;
   text-align: center;
-  width: 291px;
 }
 
 .header_lower_slogan {
-  margin-bottom: 14px;
+  margin-bottom: 38px;
   font-size: 18px;
   text-align: center;
-  width: 212.3px;
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 100;
@@ -111,7 +97,7 @@
   font-weight: 500;
   text-decoration: none;
   width: 279px;
-  height: 37px;
+  height: 39px;
   background-color: #ff4e50;
   transition: all .2s linear;
   cursor: pointer;
@@ -119,19 +105,19 @@
 
 .header_link:hover {
   background-color: #cf3e40;
-  box-shadow: rgb(238, 210, 55) 2px 2px 2px 2px;
+  box-shadow: rgba(17, 17, 17, .3) 2px 2px 2px 2px;
 }
 
 .partners_section {
   padding-top: 70px;
   padding-bottom: 58px;
-  margin: 0 auto;
 }
 
 .partners_heading {
   font-size: 22px;
   text-align: center;
-  margin-bottom: 18px;
+  margin: 0 auto;
+  width: 269px;
 }
 
 .partners_heading,
@@ -143,9 +129,11 @@
 }
 
 .partners_list {
-  width: 214px;
-  margin: 0 auto;
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  width: 320px;
+  margin-top: 30px;
 }
 
 .partners_list_item {
@@ -182,8 +170,8 @@
 
 .partners_list_item .img_block::after {
   content: "";
-  width: 31px;
-  height: 31px;
+  width: 39px;
+  height: 39px;
   position: absolute;
   top: 86px;
   left: 71%;
@@ -224,6 +212,7 @@
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 300;
+  width: 214px;
 }
 
 .partners_link {
@@ -245,143 +234,52 @@
 .partners_link:hover {
   background-color: #ff4e50;
   color: #fff;
-  box-shadow: rgb(238, 210, 55) 2px 2px 2px 2px;
 }
 
 @media (min-width: 768px) {
 
   .site_header {
-    padding-top: 30px;
     height: 700px;
+    padding-top: 40px;
   }
 
   .header_top_wrapper {
     display: flex;
     flex-direction: row-reverse;
-    justify-content: space-between;
-    align-items: baseline;
-    width: 665px;
-    line-height: 1.9;
-    margin-bottom: 66px;
+    margin-bottom: 150px;
+  }
+
+  .header_account_list {
+    margin-bottom: 0;
+    margin-right: 10px;
+  }
+  
+  .header_company_name {
+    text-align: left;
+    padding-left: 50px;
   }
 
   .header_upper_slogan {
     font-size: 52px;
-    margin-top: 80px;
-    margin-bottom: 25px;
     width: 503px;
-  }
-
-  .header_company_wrapper {
-    width: 66%;
-  }
-
-  .header_account_list {
-    margin: 0;
-  }
-
-  .header_account_list_item:not(:last-child) {
-    margin-right: 18px;
+    margin-bottom: 25px;
   }
 
   .header_lower_slogan {
     font-size: 24px;
-    width: 387px;
-    margin-bottom: 35px;
-  }
-
-  .header_link {
-    width: 227px;
-    height: 39px;
-  }
-
-  .partners_section {
-    width: 490px;
-    padding-bottom: 39px;
-  }
-
-  .partners_heading {
-    margin-bottom: 33px;
-  }
-
-  .partners_list {
-    display: flex;
-    flex-flow: column wrap;
-    width: 490px;
-    height: 507px;
-    align-content: space-between;
-  }
-
-  .partners_list_item {
-    width: 214px;
-  }
-
-  .partners_list_item:not(:nth-child(2n)) {
-    margin-bottom: 55px;
-  }
-
-  .partners_list_item:nth-child(2n) {
-    margin-bottom: 0;
-  }
-
-  .partners_link {
-    margin-top: 37px;
-    width: 190px;
-  }
-
-}
-
-@media (min-width: 1440px) {
-
-  .site_header {
-    padding-top: 40px;
-  }
-
-  .header_top_wrapper {
-    width: 980px;
-    margin-bottom: 57px;
-  }
-
-  .header_account_list {
-    margin-right: 18px;
-  }
-
-  .header_account_list_item:not(:last-child) {
-    margin-right: 26px;
-  }
-
-  .header_company_wrapper {
-    width: 503px;
-  }
-
-  .header_upper_slogan {
-    margin-bottom: 20px;
-  }
-
-  .header_lower_slogan {
-    margin-left: -6px;
     margin-bottom: 32px;
   }
 
   .header_link {
     width: 223px;
-    margin-right: -1px;
   }
 
-  .partners_section {
-    width: 940px;
-    padding-bottom: 71px;
-  }
+  .partners_heading {
+    width: 416px;
+  } 
 
   .partners_list {
-    flex-direction: row;
-    justify-content: space-between;
-    width: 940px;
-    height: 250px;
-  }
-
-  .partners_list_item:nth-child(-n + 4) {
-    margin-bottom: 0;
+    width: 492px;
   }
 
   .partners_list_item:nth-child(2) {
@@ -396,6 +294,30 @@
     order: 4;
   }
 
+}
+
+@media (min-width: 1440px) {
+
+   .site_header {
+     padding-top: 47px;
+   }
+
+  .header_company_name {
+    padding-left: 258px;
+  }
+
+  .header_account_list {
+    padding-right: 160px;
+  }
+
+  .header_upper_slogan {
+    margin-bottom: 17px;
+  }
+
+  .partners_list {
+    width: 940px;
+  }
+  
 }
 
 @font-face {
