@@ -11,7 +11,7 @@
   background-color: rgb(54, 53, 53);
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 30px 0 138px 0;
+  padding: 38px 0 138px 0;
   height: 540px;
 }
 
@@ -20,18 +20,16 @@
 }
 
 .header_top_wrapper {
- margin-bottom: 27px; 
+  margin-bottom: 18px;
 }
 
 .header_account_list {
   list-style: none;
-  display: flex;
   margin-bottom: 128px;
 }
 
 .header_account_list_item:nth-child(1) {
   text-align: right;
-  padding-right: 10px;
 }
 
 .header_account_list_item a {
@@ -70,16 +68,20 @@
   font-size: 20px;
 }
 
+.header_company_wrapper_inside {
+  flex-direction: column;
+}
+
 .header_upper_slogan {
   font-size: 30px;
-  margin: 0 auto 6px auto;
+  margin-bottom: 6px;
   width: 300px;
-  text-align: center;
 }
 
 .header_lower_slogan {
-  margin-bottom: 38px;
+  margin-bottom: 15px;
   font-size: 18px;
+  width: 231px;
   text-align: center;
   font-family: 'Roboto';
   font-style: normal;
@@ -116,8 +118,8 @@
 .partners_heading {
   font-size: 22px;
   text-align: center;
-  margin: 0 auto;
   width: 269px;
+  margin: 0 auto 30px auto;
 }
 
 .partners_heading,
@@ -244,14 +246,15 @@
   }
 
   .header_top_wrapper {
-    display: flex;
-    flex-direction: row-reverse;
     margin-bottom: 150px;
+  }
+
+  .header_top_wrapper_inside {
+    flex-direction: row-reverse;
   }
 
   .header_account_list {
     margin-bottom: 0;
-    margin-right: 10px;
   }
   
   .header_company_name {
@@ -260,14 +263,15 @@
   }
 
   .header_upper_slogan {
-    font-size: 52px;
     width: 503px;
+    font-size: 52px;
     margin-bottom: 25px;
   }
 
   .header_lower_slogan {
     font-size: 24px;
     margin-bottom: 32px;
+    width: 387px;
   }
 
   .header_link {
