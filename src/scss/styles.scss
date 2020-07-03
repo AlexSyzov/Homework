@@ -1,0 +1,59 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+@import 'normalize.scss';
+@import 'base.scss';
+@import './helpers/variables';
+
+// Переменные для шрифтов делать не стал, так как проще и эффективнее сделать миксин с рядом свойств для текста
+
+@import './helpers/mixins';
+@import './helpers/placeholders.scss';
+
+//--------------------------------------------------------------------------------------
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.main-wrapper,
+.footer {
+  width: 1201px;
+  margin: 0 auto;
+
+  @media (max-width: 1208px) {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@import './blocks/site-top.scss';
+@import './blocks/main-block.scss';
+@import './blocks/footer.scss';
+
+@media (max-width: 1208px) {
+
+  .team__list,
+  .services__list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .services__list-item:not(:last-child) {
+    margin-bottom: 99px;
+  }
+
+  .team__list-item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@import 'fonts.scss';

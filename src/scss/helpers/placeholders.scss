@@ -1,0 +1,41 @@
+%all-transition-cross-browser {
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+%display-flex-cross-browser {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+%flex-center-cross-browser {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+%justify-between-cross-browser {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+%justify-between__align-baseline__cross-browser {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+%main-gradient-cross-browser {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(10%, rgba(240, 212, 127, 0.9)), color-stop(86%, rgba(248, 137, 129, 0.9)));
+  background: -o-linear-gradient(bottom, rgba(240, 212, 127, 0.9) 10%, rgba(248, 137, 129, 0.9) 86%);
+  background: linear-gradient(0deg, rgba(240, 212, 127, 0.9) 10%, rgba(248, 137, 129, 0.9) 86%);
+}
