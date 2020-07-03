@@ -147,15 +147,17 @@ gulp.task('otf2ttf', function () {
 })
 
 gulp.task('svgSprite', function () {
-  return gulp.src([source_folder + '/icons/*.svg'])
-  .pipe(svgSprite({
-    mode: {
-      stack: {
-        sprite: "../icons/sprites.svg",
-      }
-    }
-  }))
-})
+  return gulp.src('./src/img/icons/*.svg')
+      .pipe(svgSprite({
+              mode: {
+                  stack: {
+                      sprite: "../sprite.svg"
+                  }
+              },
+          }
+      ))
+      .pipe(gulp.dest('./dist/img/icons'));
+});
 
 // function fontsStyle (params) {
 //   let file_content = fs.readFileSync(source_folder + '/scss/fonts.scss');
