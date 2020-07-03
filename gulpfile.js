@@ -146,7 +146,7 @@ gulp.task('otf2ttf', function () {
       .pipe(dest(source_folder + '/fonts/'));
 })
 
-gulp.task('svgSprite', function () {
+ function svgSprites () {
   return gulp.src('./src/img/icons/*.svg')
       .pipe(svgSprite({
               mode: {
@@ -157,7 +157,7 @@ gulp.task('svgSprite', function () {
           }
       ))
       .pipe(gulp.dest('./dist/img/icons'));
-});
+};
 
 // function fontsStyle (params) {
 //   let file_content = fs.readFileSync(source_folder + '/scss/fonts.scss');
@@ -194,12 +194,13 @@ function clean(params) {
   return del(path.clean);
 }
 
-let build = gulp.series(clean, gulp.parallel(/*js*/ css, html, images, fonts), /*fontsStyle*/);
+let build = gulp.series(clean, gulp.parallel(/*js*/ css, html, images, fonts, svgSprites)/*fontsStyle*/);
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
 //exports.fontsStyle = fontsStyle;
 exports.fonts = fonts;
 exports.images = images;
+exports.svgSprites = svgSprites;
 /*exports.js = js;*/
 exports.css = css;
 exports.html = html;
