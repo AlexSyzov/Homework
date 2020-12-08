@@ -42,26 +42,6 @@ export default class App extends Component {
     }));
   };
 
-  // handleFormSubmission = (e) => {
-  //   e.preventDefault();
-  //   const { name, number } = this.state;
-
-  //   if (!this.checkPhoneNumber(number)) {
-  //     error({
-  //       text: "Wrong phone number format. It must look like this: xxx-xx-xx",
-  //       width: "300px",
-  //       delay: 3000,
-  //     });
-  //     return;
-  //   }
-
-  //   this.setState((prevState) => ({
-  //     name: "",
-  //     contacts: [...prevState.contacts, { id: uuidv4(), name, number }],
-  //     number: "",
-  //   }));
-  // };
-
   getVisibleContacts = (e) => {
     const { contacts, filter } = this.state;
 
