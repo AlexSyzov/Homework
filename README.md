@@ -1,2 +1,2 @@
-# goit-react-hw-02-phonebook
-For homework in GoIT
+# goit-react-hw-03-phonebook
+For React homework in GoIT
