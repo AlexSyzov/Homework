@@ -1,8 +1,5 @@
 import React, { Component } from "react";
 import { Form, FormInput, FormLabel, Button } from "../styled";
-import "@pnotify/core/dist/PNotify.css";
-import "@pnotify/core/dist/BrightTheme.css";
-import { error } from "@pnotify/core";
 import PropTypes from "prop-types";
 
 export default class ContactForm extends Component {
@@ -28,29 +25,12 @@ export default class ContactForm extends Component {
 
     const { name, number } = this.state;
 
-    if (!this.checkPhoneNumber(number)) {
-      error({
-        text: "Wrong phone number format. It must look like this: xxx-xx-xx",
-        width: "300px",
-        delay: 3000,
-      });
-      return;
-    }
-
     this.setState({
       name: "",
       number: "",
     });
 
     this.props.onFormSubmission(name, number);
-  };
-
-  checkPhoneNumber = (number) => {
-    const format = /\d{3}[-]\d{2}[-]\d{2}$/;
-
-    const isValid = format.test(number);
-
-    return isValid ? number : "";
   };
 
   render() {
@@ -69,9 +49,10 @@ export default class ContactForm extends Component {
         </FormLabel>
 
         <FormLabel>
-          Number
+          Number (xxx-xx-xx)
           <FormInput
             type="tel"
+            pattern="[0-9]{3}-[0-9]{2}-[0-9]{2}"
             value={number}
             name={"number"}
             onChange={this.handleInputChange}

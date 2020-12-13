@@ -11,6 +11,23 @@ export default class App extends Component {
     filter: "",
   };
 
+  componentDidMount() {
+    const persistedContacts = localStorage.getItem("contacts");
+
+    if (persistedContacts) {
+      this.setState({ contacts: JSON.parse(persistedContacts) });
+    }
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    const { contacts } = this.state;
+    const { contacts: prevContacts } = prevState;
+
+    if (prevContacts !== contacts) {
+      localStorage.setItem("contacts", JSON.stringify(this.state.contacts));
+    }
+  }
+
   handleInputChange = (e) => {
     const { name, value } = e.target;
 
@@ -21,7 +38,7 @@ export default class App extends Component {
 
   handleFormSubmission = (name, number) => {
     if (this.isInContacts(name)) {
-      alert(`${name} is already in contacts!`);
+      alert(`${name.trim()} is already in contacts!`);
       return;
     }
 
@@ -32,7 +49,8 @@ export default class App extends Component {
 
   isInContacts = (name) => {
     return this.state.contacts.some(
-      (contact) => name.toLowerCase() === contact.name.toLowerCase()
+      (contact) =>
+        name.toLowerCase().trim() === contact.name.toLowerCase().trim()
     );
   };
 
