@@ -24,7 +24,7 @@ export default class App extends Component {
     const { contacts: prevContacts } = prevState;
 
     if (prevContacts !== contacts) {
-      localStorage.setItem("contacts", JSON.stringify(this.state.contacts));
+      localStorage.setItem("contacts", JSON.stringify(contacts));
     }
   }
 
